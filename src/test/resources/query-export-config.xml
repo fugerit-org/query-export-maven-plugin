@@ -1,0 +1,21 @@
+<query-catalog-catalog>
+
+	<query-catalog id="sample-catalog">
+		<!-- 1 - dec tipo evento -->
+		<query id="sample_csv"
+			sql="SELECT * SAMPLE"
+			outputFile="target/sample/sample.csv"
+			outputFormat="csv"
+			createPath="1"
+		/>	
+		<query id="dec_tipo_evento_xlsx"
+			sql="SELECT * SAMPLE"
+			outputFile="target/sample/sample.xslx"
+			outputFormat="xlsx"
+			xlsResize="1"
+			createPath="1"
+		/>					
+	</query-catalog>
+	
+
+</query-catalog-catalog>
