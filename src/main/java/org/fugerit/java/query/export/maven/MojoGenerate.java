@@ -12,6 +12,7 @@ import org.fugerit.java.core.lang.helpers.StringUtils;
 import org.fugerit.java.core.util.collection.ListMapStringKey;
 import org.fugerit.java.query.export.catalog.QueryConfig;
 import org.fugerit.java.query.export.catalog.QueryConfigCatalog;
+import org.fugerit.java.query.export.facade.QueryExportFacade;
 import org.fugerit.java.query.export.facade.format.QueryExportHandlerXLSBase;
 import org.fugerit.java.query.export.tool.QueryExportToolMain;
 
@@ -47,7 +48,7 @@ public class MojoGenerate extends AbstractMojo {
                 	this.addIfNotEmpty(props, QueryExportToolMain.ARG_QUERY_SQL, current.getSql() );
                 	this.addIfNotEmpty(props, QueryExportToolMain.ARG_OUTPUT_FILE, current.getOutputFile() );
                 	this.addIfNotEmpty(props, QueryExportToolMain.ARG_CSV_SEPARATOR, current.getCsvSeparator() );
-                	this.addIfNotEmpty(props, QueryExportHandlerXLSBase.ARG_XLS_RESIZE, current.getXlsResize() );
+                	this.addIfNotEmpty(props, QueryExportFacade.ARG_XLS_RESIZE, current.getXlsResize() );
                 	this.addIfNotEmpty(props, QueryExportToolMain.ARG_OUTPUT_FORMAT, current.getOutputFormat() );
                 	this.addIfNotEmpty(props, QueryExportToolMain.ARG_CREATE_PATH, current.getCreatePath() );
                 	getLog().info( "using parameters -> "+props );
